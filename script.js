@@ -1,3 +1,16 @@
+/* The following program contains the source code for a game called Rock, paper, scissor. 
+
+Rock, paper, scissor is a popular board game all of the world where two players choose either rock, scissor or paper. It is played on a five round.
+Game rule is very simple
+
+Winner:
+Stone beats scissors.
+Paper beats stone by wrapping it.
+Scissors beat the paper by cutting it.
+
+If the players choose the same situation, the game ends in a draw.
+For the player to win, player must be winner at least three rounds.
+*/
 // computer play funtion created for random string choosing by computer
 function computerPlay(){
     const computerKeys = Object.keys(ruleGame)
