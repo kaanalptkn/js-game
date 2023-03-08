@@ -1,8 +1,10 @@
 /* The following program contains the source code for a game called Rock, paper, scissor. 
 
-Rock, paper, scissor is a popular board game all of the world where two players choose either rock, scissor or paper. It is played on a five round.
-Game rule is very simple
+Rock, paper, scissor is a popular game all of the world where two players choose either rock, scissor or paper.
+In this case, player playing against to computer 
+This is a five round.
 
+Game rule is very simple as it is.
 Winner:
 Stone beats scissors.
 Paper beats stone by wrapping it.
@@ -11,6 +13,8 @@ Scissors beat the paper by cutting it.
 If the players choose the same situation, the game ends in a draw.
 For the player to win, player must be winner at least three rounds.
 */
+
+
 // computer play funtion created for random string choosing by computer
 function computerPlay(){
     const computerKeys = Object.keys(ruleGame)
@@ -18,8 +22,9 @@ function computerPlay(){
     const computerKey = computerKeys[index]
     return computerKey
 }
-// in the below code explain about game rules.
 
+
+// in the below code explain about game rules.
 const ruleGame = {
     rock: {
         rock: 0, 
@@ -38,10 +43,13 @@ const ruleGame = {
     }
 }
 
+// This part created for counting roung, player score and computer score
 let countRound = 1
 let playerScore = 0
 let computerScore = 0
 
+
+// This section creatd for messages when player win or loose game what messages appear
 function playRound(playerSelection, computerSelection){
    const winner = ruleGame[computerSelection][playerSelection]
    if(winner == 1){
@@ -57,7 +65,7 @@ function playRound(playerSelection, computerSelection){
    countRound++    // it cound round
 }
 
-
+// It is a total score when player finish five rounds
 function totalScore(){
     if(playerScore > computerScore){
         console.log("Well done! You are winner babe!")
